@@ -70,10 +70,6 @@ function App() {
                 path="/scorecard"
                 element={<ScoreCard/>}
               />
-                 <Route 
-                path="/me"
-                element={<Profile />}
-              />
             </Routes>
           </div>
         <Footer />
