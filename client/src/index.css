@@ -21,6 +21,14 @@ Nav {
   .logo {
     display: block;
     padding: 8px
+
+    img {
+      display: block;
+      margin: 8px;
+      width: 24px;
+      height: auto;
+
+    }
   }
 
 }
