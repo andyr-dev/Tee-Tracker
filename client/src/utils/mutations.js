@@ -23,3 +23,13 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_GAME = gql`
+  mutation addGame($gameData: String!) {
+    addGame(gameData: $gameData) {
+      _id
+      gameData
+      createdAt
+    }
+  }
+`;
