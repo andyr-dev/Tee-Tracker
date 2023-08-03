@@ -14,26 +14,26 @@ const Header = () => {
   
 };
 return (
-  <>
-    <div>
-      <Link to="/">
-        <h1>Log In</h1>
-      </Link>
-    </div>
-    <div>
-      {Auth.loggedIn() ? (
-        <>
-          <Link to="/me">{Auth.getProfile().data.username}'s profile</Link>
-          <button onClick={logout}>Logout</button>
-        </>
-      ) : (
-        <>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Signup</Link>
-        </>
-      )}
-    </div>
-  </>
+  <header>
+  <div className="header">
+  <Link to="/" className="logo-link">
+    <h1 className="logo-text">Log In</h1>
+  </Link>
+</div>
+<div className="nav-container">
+  {Auth.loggedIn() ? (
+    <>
+      <Link to="/me" className="nav-link">{Auth.getProfile().data.username}'s profile</Link>
+      <button onClick={logout} className="logout-button">Logout</button>
+    </>
+  ) : (
+    <>
+      <Link to="/login" className="nav-link">Login</Link>
+      <Link to="/signup" className="nav-link">Signup</Link>
+    </>
+  )}
+</div>
+</header>
 );
 }
 export default Header;
