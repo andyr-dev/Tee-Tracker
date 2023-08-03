@@ -1,20 +1,27 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 //Import logo from file
-import logo from '../../assets/Logo.png';
+
 
 export default function Nav() {
   return (
-    <nav>
-      <img src={logo} alt="TeeTrackerLogo" className="logo" />
-
-      <ul>
-        {/* replace text icons with icons from Material UI */}
-        <Link to="/"> Home </Link>
-        <Link to="/scorecard"> ScoreCard </Link>
-        <Link to = "/me"> Profile </Link>
-        <Link to = "/login" > Login </Link>
-        <Link to = "/signup"> Signup </Link>
+    <nav className="navbar">
+      <ul className="nav-list">
+        <li className="nav-item">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/scorecard">ScoreCard</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/me">Profile</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/login">Login</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/signup">Signup</Link>
+        </li>
       </ul>
     </nav>
   );

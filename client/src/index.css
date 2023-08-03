@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Montserrat:wght@300&display=swap');
 
+* {
+  box-sizing: border-box;
+ }
+
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -10,17 +15,351 @@ body {
 code {
   font-family: 'Montserrat', sans-serif;
 }
-Nav {
-  background: grey;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 3;
-  min-height: 500px;
 
-  .logo {
-    display: block;
-    padding: 8px;
+/* home */
+.home {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  position: absolute;
+  border: 5px;
+  left: 0px;
+  top: 90px;
+  width: 250px;
+  height: auto;
+}
+/* Header.css */
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.login-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/* Nav.css */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-item a:hover {
+  color: lightgray;
+}
+
+
+
+
+.headerContainer {
+  width: auto;
+  margin-left: 50px;
+}
+
+.headerContainer h1 {
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  height: 20px;
+  font-weight: 60;
+  color: black;
+}
+
+.headerContainer p {
+  padding: 0;
+  font-size: 40px;
+  font-weight: lighter;
+  color: white;
+}
+/*bring back if team wants button page*/
+/* .headerContainer button {
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #121619;
+  height: 50px;
+  width: 180px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+} */
+
+/* .headerContainer button:hover {
+  background-color: #07090a;
+  cursor: pointer;
+  transition: 0.3s ease-in; */
+/* } */
+
+@media only screen and (max-width: 650px) {
+  .home {
+    justify-content: center;
+    align-items: center;
+  }
+  .headerContainer h1, p {
+    color: white;
   }
 
+  .headerContainer {
+    margin-left: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #121619; */
+    color: white;
+  }
+
+  .headerContainer h1 {
+    font-size: 40px;
+    height: 30px;
+    color: white;
+  }
+
+  .headerContainer p {
+    font-size: 30px;
+    color: white;
+  }
+
+  /* .headerContainer button {
+    background-color: white;
+    color: #121619;
+    margin-bottom: 30px; */
+  }
+  /* Footer.css */
+.main-footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  margin: 0 15px;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.list-unstyled li {
+  margin-bottom: 10px;
+}
+
+.list-unstyled li:last-child {
+  margin-bottom: 0;
+}
+
+.list-unstyled li::before {
+  content: '• ';
+}
+
+
+  .bottom-footer {
+    position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+  @media sccreen and (max-width: 600px){
+    .col{
+      width: 100%
+    }
+  }
+  /* login form*/
+
+.login-container {
+  background-image: url('./assets/golfBall1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+  }
+  
+  .login-card {
+    width: 50%;
+    padding: 15px;
+  }
+}
+.login-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  width: 500px;
+}
+
+.card-title {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-content {
+  padding: 20px 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .signup-container {
+    padding: 20px;
+  }
+  
+  .signup-card {
+    width: 50%;
+    padding: 5px;
+  }
+}
+/* SignupStyles.css */
+.signup-container {
+  background-image: url('./assets/golfGuys.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  width: 300px;
+}
+
+.card-header {
+  margin: 0;
+}
+
+.card-body {
+  padding: 10px 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
 }

@@ -5,6 +5,8 @@ import {LOGIN_USER }from '../utils/mutations'
 
 import Auth from '../utils/auth';
 
+
+
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -41,11 +43,11 @@ const Login = (props) => {
   };
 
   return (
-    <main className="">
-      <div className="">
-        <div className="card">
-          <h4 className="">Login</h4>
-          <div className="">
+    <main className="login-container">
+  <div className="login-card">
+    <div className="card">
+      <h4 className="card-title">Login</h4>
+      <div className="card-content">
             {data ? (
               <p>
                 Success! You may now head{' '}
