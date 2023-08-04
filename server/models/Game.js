@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+const {formatDate} = require('../utils/helpers');
 
 const gameSchema = new Schema({
   gameData: 
