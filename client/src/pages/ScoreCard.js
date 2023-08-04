@@ -1,6 +1,14 @@
 import React, { useState } from "react";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from "@mui/material";
-
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  Button,
+} from "@mui/material";
 
 const ScoreCard = () => {
   const [holeCounts, setHoleCounts] = useState(Array(18).fill(0));
@@ -48,12 +56,18 @@ const ScoreCard = () => {
                   <input type="checkbox" />
                 </TableCell>
                 <TableCell>
-                  <Button variant="outlined" onClick={() => handleIncrement(index)}>
-                    +
+                  <Button
+                    variant="outlined"
+                    onClick={() => handleIncrement(index)}
+                  >
+                    -
                   </Button>
                   <span>{count}</span>
-                  <Button variant="outlined" onClick={() => handleDecrement(index)}>
-                    -
+                  <Button
+                    variant="outlined"
+                    onClick={() => handleDecrement(index)}
+                  >
+                    +
                   </Button>
                 </TableCell>
                 <TableCell contentEditable="true"></TableCell>
