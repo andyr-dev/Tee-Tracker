@@ -185,9 +185,9 @@ code {
   }
   /* Footer.css */
 .main-footer {
-  background-color: #333;
+  background-color:rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .container {
@@ -205,7 +205,8 @@ code {
 }
 
 h4 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .list-unstyled {
@@ -222,7 +223,7 @@ h4 {
 }
 
 .list-unstyled li::before {
-  content: '• ';
+  content: '';
 }
 
 
@@ -265,7 +266,7 @@ h4 {
   }
 }
 .login-card {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -362,4 +363,70 @@ h4 {
   padding: 8px;
   border-radius: 4px;
   cursor: pointer;
+}
+/* ... Your existing CSS code ... */
+
+/* Responsive styles for .home */
+@media only screen and (max-width: 650px) {
+  .home {
+    justify-content: center;
+    align-items: center;
+  }
+  .headerContainer h1, p {
+    color: white;
+  }
+
+  .headerContainer {
+    margin-left: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+
+  .headerContainer h1 {
+    font-size: 40px;
+    height: 30px;
+    color: black;
+  }
+
+  .headerContainer p {
+    font-size: 30px;
+    color: white;
+  }
+}
+
+/* Responsive styles for .main-footer */
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}
+
+/* Responsive styles for .login-container */
+@media screen and (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-card {
+    width: 50%;
+    padding: 15px;
+  }
+}
+
+/* Responsive styles for .signup-container */
+@media screen and (max-width: 768px) {
+  .signup-container {
+    padding: 20px;
+  }
+
+  .signup-card {
+    width: 50%;
+    padding: 5px;
+  }
 }
