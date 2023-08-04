@@ -11,7 +11,6 @@ const typeDefs = gql`
 
   type Game {
     _id: ID
-    gameData: Object
     createdAt: String
   }
 
