@@ -1,12 +1,3 @@
-// import React from 'react';
-
-// export default function Profile(){
-// return (
-//     <h1>This is the Profile page</h1>
-// )
-// }
-
-
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';

@@ -33,3 +33,14 @@ export const ADD_GAME = gql`
     }
   }
 `;
+
+export const SAVE_GAME = gql`
+  mutation saveGame($scoreCardData: [GameDataInput!]!) {
+    createGame(scoreCardData: $scoreCardData) {
+      gameData
+    }
+  }
+`;
+
+
+//created a save_game mutation, we likely need to change the parameters being passed
