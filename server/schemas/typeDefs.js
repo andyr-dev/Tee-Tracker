@@ -27,12 +27,24 @@ const typeDefs = gql`
     me: User
   }
 
+  input GameDataInput {
+    hole: Int
+    par: Int
+    GIR: Boolean
+    FIR: Boolean
+    putts: Int
+    scoreToPar: Int
+  }
+
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addGame(gameData: String!): Game
     removeGame(gameId: ID!): Game
+    saveGame(scoreCardData: [GameDataInput!]!): Game
   }
-`;
 
+`;
+// added the saveGame mutation to store the information and found the input type but I cant figure out
+//how to pass it in 
 module.exports = typeDefs;
