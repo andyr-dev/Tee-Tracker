@@ -30,8 +30,8 @@ const ScoreCard = () => {
   };
 
   return (
-    <div>
-      <h1>Golf Score Card</h1>
+    <div className= "scorecard-container">
+       <h1 className="scorecard-title">Golf Score Card</h1>
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
@@ -48,7 +48,7 @@ const ScoreCard = () => {
             {holeCounts.map((count, index) => (
               <TableRow key={index + 1}>
                 <TableCell>{index + 1}</TableCell>
-                <TableCell contentEditable="true"></TableCell>
+                <TableCell className="par-input" contentEditable="true"></TableCell>
                 <TableCell>
                   <input type="checkbox" />
                 </TableCell>
@@ -70,7 +70,7 @@ const ScoreCard = () => {
                     +
                   </Button>
                 </TableCell>
-                <TableCell contentEditable="true"></TableCell>
+                <TableCell className="par-input" contentEditable="true"></TableCell>
               </TableRow>
             ))}
           </TableBody>
