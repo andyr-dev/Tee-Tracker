@@ -237,7 +237,7 @@ h4 {
   text-align: center;
 }
 
-  @media sccreen and (max-width: 600px){
+  @media screen and (max-width: 600px){
     .col{
       width: 100%
     }
@@ -272,9 +272,9 @@ h4 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card {
+/* .card {
   width: 500px;
-}
+} */
 
 .card-title {
   margin: 0;
@@ -334,9 +334,9 @@ h4 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card {
+/* .card {
   width: 300px;
-}
+} */
 
 .card-header {
   margin: 0;
@@ -429,4 +429,18 @@ h4 {
     width: 50%;
     padding: 5px;
   }
+}
+.scorecard {
+  padding-top: 260px
+}
+.par-input {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-sizing: border-box;
+  text-align: center; 
+}
+/* table rows */
+.table-row {
+  background-color: #7c4848;
 }
