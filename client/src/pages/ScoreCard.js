@@ -85,8 +85,8 @@ const ScoreCard = () => {
       });
   };
   return (
-    <div>
-      <h1>Golf Score Card</h1>
+    <div className= "scorecard-container">
+      <h1 className="scorecard-title">Golf Score Card>Golf Score Card</h1>
       <Button variant="contained" onClick={saveScoreCardToDB}>
         Save Score Card
       </Button>
@@ -106,7 +106,7 @@ const ScoreCard = () => {
             {holeCounts.map((count, index) => (
               <TableRow key={index + 1}>
                 <TableCell>{index + 1}</TableCell>
-                <TableCell>
+                <TableCell className="par-input">
                   <input
                     type="number"
                     value={parValues[index]}
@@ -142,7 +142,7 @@ const ScoreCard = () => {
                     +
                   </Button>
                 </TableCell>
-                <TableCell>
+                <TableCell className="par-input>
                   {" "}
                   <input
                     type="number"
