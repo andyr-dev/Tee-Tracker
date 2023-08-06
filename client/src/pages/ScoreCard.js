@@ -85,8 +85,8 @@ const ScoreCard = () => {
       });
   };
   return (
-    <div className= "scorecard-container">
-      <h1 className="scorecard-title">Golf Score Card>Golf Score Card</h1>
+    <div className="scorecard-container">
+      <h1 className="scorecard-title">Golf Score Card</h1>
       <Button variant="contained" onClick={saveScoreCardToDB}>
         Save Score Card
       </Button>
@@ -142,7 +142,7 @@ const ScoreCard = () => {
                     +
                   </Button>
                 </TableCell>
-                <TableCell className="par-input>
+                <TableCell className="par-input">
                   {" "}
                   <input
                     type="number"
