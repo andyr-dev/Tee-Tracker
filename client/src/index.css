@@ -445,7 +445,7 @@ h4 {
   background-color: #f5f6fa;
 }
 .checkbox-input {
-  transform: scale(.75); /* Make the checkboxes larger */
+  transform: scale(2); /* Make the checkboxes larger */
   margin: 0 auto;
   display: block;
 }
