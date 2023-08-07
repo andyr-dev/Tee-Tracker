@@ -37,16 +37,19 @@ export const QUERY_SINGLE_GAME = gql`
 
 
 export const QUERY_ME = gql`
-  query user($username: String!) {
-    user(username: $username) {
+  query me {
+    me {
       _id
       username
       email
-      games {
-        _id
-        gameData
-        createdAt
-      }
     }
   }
 `;
+
+// add the games to the me query once they are setup
+
+// games {
+//   id
+//   gameData
+//   createdAt
+// }
