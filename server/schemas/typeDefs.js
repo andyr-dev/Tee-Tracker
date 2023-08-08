@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type User {
@@ -52,8 +52,6 @@ const typeDefs = gql`
     removeGame(gameId: ID!): Game
     saveGame(scoreCardData: [GameDataInput!]!): Game
   }
-
 `;
-// added the saveGame mutation to store the information and found the input type but I cant figure out
-//how to pass it in 
+
 module.exports = typeDefs;
