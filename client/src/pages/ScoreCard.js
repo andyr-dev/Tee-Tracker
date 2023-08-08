@@ -78,7 +78,7 @@ const ScoreCard = () => {
 
     createGame({ variables: { gameData: scoreCardData } })
       .then((response) => {
-        console.log("Score card saved successfully:", response.data);
+        alert("Score card saved successfully", response.data);
       })
       .catch((error) => {
         console.error("Error saving score card:", error);
@@ -101,7 +101,7 @@ const ScoreCard = () => {
               <TableCell>G.I.R</TableCell>
               <TableCell>Putts</TableCell>
               <TableCell>Score to Par</TableCell>
-            </TableRow>
+            </TableRow>``
           </TableHead>
           <TableBody>
             {holeCounts.map((count, index) => (
