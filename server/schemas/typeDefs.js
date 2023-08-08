@@ -11,9 +11,18 @@ const typeDefs = gql`
 
   type Game {
     _id: ID
+    gameData: [GameData]
     createdAt: String
   }
 
+  type GameData {
+    hole: Int
+    par: Int
+    GIR: Boolean
+    FIR: Boolean
+    putts: Int
+    scoreToPar: Int
+  }
 
   type Auth {
     token: ID!
@@ -39,7 +48,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addGame(gameData: String!): Game
+    addGame(gameData: [GameDataInput]): Game
     removeGame(gameId: ID!): Game
     saveGame(scoreCardData: [GameDataInput!]!): Game
   }

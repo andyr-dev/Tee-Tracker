@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import { useMutation } from "@apollo/client";
-import { SAVE_GAME } from "../utils/mutations";
+import { ADD_GAME } from "../utils/mutations";
 
 const ScoreCard = () => {
   const [holeCounts, setHoleCounts] = useState(Array(18).fill(0));
@@ -63,7 +63,7 @@ const ScoreCard = () => {
     setScoreToParValues(newScoreToParValues);
   };
 
-  const [createGame] = useMutation(SAVE_GAME);
+  const [createGame] = useMutation(ADD_GAME);
 
   const saveScoreCardToDB = () => {
     const scoreCardData = holeCounts.map((count, index) => ({
@@ -76,7 +76,7 @@ const ScoreCard = () => {
     }));
     console.log(scoreCardData);
 
-    createGame({ variables: { scoreCardData } })
+    createGame({ variables: { gameData: scoreCardData } })
       .then((response) => {
         console.log("Score card saved successfully:", response.data);
       })
@@ -85,7 +85,8 @@ const ScoreCard = () => {
       });
   };
   return (
-    <div className= "scorecard-container">
+    <div className="scorecard-container">
+  
       <h1 className="scorecard-title">Golf Score Card</h1>
       <Button variant="contained" onClick={saveScoreCardToDB}>
         Save Score Card
@@ -108,7 +109,8 @@ const ScoreCard = () => {
                 <TableCell>{index + 1}</TableCell>
                 <TableCell className="par-input">
                   <input
-                    type="number"
+                    type="number" className="test-input"
+                    size="small"
                     value={parValues[index]}
                     onChange={(event) => handleParChange(index, event)}
                   />
@@ -116,12 +118,14 @@ const ScoreCard = () => {
                 <TableCell>
                   <input
                     type="checkbox"
+                    className="checkbox-input"
                     checked={FIRValues[index]}
                     onChange={() => handleFIRChange(index)}
                   />
                 </TableCell>
                 <TableCell>
                   <input
+                    className="checkbox-input"
                     type="checkbox"
                     checked={GIRValues[index]}
                     onChange={() => handleGIRChange(index)}
@@ -143,9 +147,9 @@ const ScoreCard = () => {
                   </Button>
                 </TableCell>
                 <TableCell className="par-input">
-                  {" "}
                   <input
-                    type="number"
+                    type="number" className="test-input"
+                    size="small"
                     value={scoreToParValues[index]}
                     onChange={(event) => handleScoreToParChange(index, event)}
                   />
