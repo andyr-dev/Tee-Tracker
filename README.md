@@ -13,7 +13,7 @@
   - [Deployment](#deployment)
 
   ## Description
-  This application will allow you to keep up with your statistics when playing a round of golf. You will be able to  track the fairways and greens you hit, the number of putts you have, and your score. All of this information will be saved in your profile for you to lool back on and compare to future rounds.
+  This application will allow you to keep up with your statistics when playing a round of golf. You will be able to  track the fairways and greens you hit, the number of putts you have, and your score. All of this information will be saved in your profile for you to look back on and compare to future rounds.
   ## Languages
   Javascript, REACT, MERN, CSS, HTML
   ## Installed Tools
@@ -33,4 +33,4 @@
 
   picture scorecard - ![scorecard](https://github.com/andyr-dev/Tee-Tracker/assets/124836497/747ef6cc-39b4-442f-aea7-3c766b693119)
 
-  website - ' 
+  heroku deployment - https://tee-tracker-f002b4a04af4.herokuapp.com/
