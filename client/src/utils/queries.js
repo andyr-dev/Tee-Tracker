@@ -37,19 +37,24 @@ export const QUERY_SINGLE_GAME = gql`
 
 
 export const QUERY_ME = gql`
-  query me {
-    me {
+query Me {
+  me {
+    _id
+    email
+    games {
+      gameData {
+        FIR
+        GIR
+        hole
+        par
+        putts
+        scoreToPar
+      }
+      createdAt
       _id
-      username
-      email
     }
+    username
   }
-`;
+}`
 
-// add the games to the me query once they are setup
 
-// games {
-//   id
-//   gameData
-//   createdAt
-// }

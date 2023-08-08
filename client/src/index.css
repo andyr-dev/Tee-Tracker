@@ -456,3 +456,7 @@ h4 {
   }
 }
 
+.profile-bg {
+  background-color : green;
+  color: white;
+}
