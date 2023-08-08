@@ -25,13 +25,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_GAME = gql`
-  mutation addGame($gameData: String!) {
-    addGame(gameData: $gameData) {
-      _id
-      gameData
-      createdAt
-    }
+mutation addGame($gameData: [GameDataInput]) {
+  addGame(gameData: $gameData) {
+    _id
+    createdAt
   }
+}
 `;
 
 export const SAVE_GAME = gql`

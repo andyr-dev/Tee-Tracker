@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 import { useMutation } from "@apollo/client";
-import { SAVE_GAME } from "../utils/mutations";
+import { ADD_GAME } from "../utils/mutations";
 
 const ScoreCard = () => {
   const [holeCounts, setHoleCounts] = useState(Array(18).fill(0));
@@ -63,7 +63,7 @@ const ScoreCard = () => {
     setScoreToParValues(newScoreToParValues);
   };
 
-  const [createGame] = useMutation(SAVE_GAME);
+  const [createGame] = useMutation(ADD_GAME);
 
   const saveScoreCardToDB = () => {
     const scoreCardData = holeCounts.map((count, index) => ({
@@ -76,7 +76,7 @@ const ScoreCard = () => {
     }));
     console.log(scoreCardData);
 
-    createGame({ variables: { scoreCardData } })
+    createGame({ variables: { gameData: scoreCardData } })
       .then((response) => {
         console.log("Score card saved successfully:", response.data);
       })

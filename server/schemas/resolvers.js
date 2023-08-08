@@ -50,6 +50,7 @@ const resolvers = {
 
     saveGame: async (parent, { scoreCardData }) => {
       try {
+        console.log(gameData);
         const newGame = new Game({ gameData: scoreCardData });
         const savedGame = await newGame.save();
         return savedGame;
@@ -60,10 +61,12 @@ const resolvers = {
     },
 
     addGame: async (parent, { gameData }, context) => {
+      console.log(gameData);
       if (context.user) {
         const game = await Game.create({
           gameData,
         });
+      
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
