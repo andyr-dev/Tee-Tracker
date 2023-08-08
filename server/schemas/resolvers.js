@@ -67,10 +67,11 @@ const resolvers = {
           gameData,
         });
       
-
+        console.log(context.user._id)
+        console.log(game._id)
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { game: game._id } }
+          { $addToSet: { games: game._id } }
         );
 
         return game;
