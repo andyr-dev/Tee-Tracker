@@ -430,17 +430,74 @@ h4 {
     padding: 5px;
   }
 }
-.scorecard {
+.scorecard-container {
   padding-top: 260px
+ 
 }
-.par-input {
+/* .par-input {
   outline: none;
-  border-color: #007bff;
+  border-color: #00cec9;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-sizing: border-box;
+  text-align: center;  */
+/* } */
+.test-input {
+  width: 2em;
+  height: 20%;
+  outline: none;
+  border-color: #00cec9;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   box-sizing: border-box;
   text-align: center; 
 }
 /* table rows */
 .table-row {
-  background-color: #7c4848;
+  background-color: #f5f6fa;
 }
+.checkbox-input {
+  transform: scale(2); /* Make the checkboxes larger */
+  margin: 0 auto;
+  display: block;
+}
+.score-button {
+  padding: 5px 0px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.score-button:hover {
+  background-color: #0056b3;
+}
+
+.score-count {
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .par-input {
+    width: 30%;
+  }
+  .score-button {
+    padding: 3px 8px;
+  }
+  @media screen and (max-width: 480px) {
+    .scorecard-title {
+      font-size: 20px;
+    }
+    
+    .par-input {
+      width: 20%;
+      padding: 6px;
+    }
+    
+    .score-button {
+      padding: 2px 6px;
+    }
+  }
+}
+
