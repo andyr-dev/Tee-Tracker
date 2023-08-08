@@ -78,7 +78,7 @@ const ScoreCard = () => {
 
     createGame({ variables: { gameData: scoreCardData } })
       .then((response) => {
-        console.log("Score card saved successfully:", response.data);
+        alert("Score card saved successfully", response.data);
       })
       .catch((error) => {
         console.error("Error saving score card:", error);
@@ -86,6 +86,7 @@ const ScoreCard = () => {
   };
   return (
     <div className="scorecard-container">
+  
       <h1 className="scorecard-title">Golf Score Card</h1>
       <Button variant="contained" onClick={saveScoreCardToDB}>
         Save Score Card
@@ -100,7 +101,7 @@ const ScoreCard = () => {
               <TableCell>G.I.R</TableCell>
               <TableCell>Putts</TableCell>
               <TableCell>Score to Par</TableCell>
-            </TableRow>
+            </TableRow>``
           </TableHead>
           <TableBody>
             {holeCounts.map((count, index) => (
@@ -108,7 +109,8 @@ const ScoreCard = () => {
                 <TableCell>{index + 1}</TableCell>
                 <TableCell className="par-input">
                   <input
-                    type="number"
+                    type="number" className="test-input"
+                    size="small"
                     value={parValues[index]}
                     onChange={(event) => handleParChange(index, event)}
                   />
@@ -116,12 +118,14 @@ const ScoreCard = () => {
                 <TableCell>
                   <input
                     type="checkbox"
+                    className="checkbox-input"
                     checked={FIRValues[index]}
                     onChange={() => handleFIRChange(index)}
                   />
                 </TableCell>
                 <TableCell>
                   <input
+                    className="checkbox-input"
                     type="checkbox"
                     checked={GIRValues[index]}
                     onChange={() => handleGIRChange(index)}
@@ -143,9 +147,9 @@ const ScoreCard = () => {
                   </Button>
                 </TableCell>
                 <TableCell className="par-input">
-                  {" "}
                   <input
-                    type="number"
+                    type="number" className="test-input"
+                    size="small"
                     value={scoreToParValues[index]}
                     onChange={(event) => handleScoreToParChange(index, event)}
                   />
